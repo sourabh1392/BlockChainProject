@@ -5,14 +5,11 @@ const route=require("./route/route")
 
 app.use(express.json())
 
-
 mongoose.connect("mongodb+srv://SourabhPatil1392:Patils1392@newproject.orvb1ly.mongodb.net/blockChain",{
     useNewurlParser:true
-
 })
 .then(()=>console.log("Mongodb is connected"))
 .catch ( err => console.log(err) )
-
 
 app.use("/",route)
 
